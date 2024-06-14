@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .button-container {
+            text-align: center;
+        }
+        .button-container button {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .login-button {
+            background-color: #007bff;
+            color: #fff;
+        }
+        .login-button:hover {
+            background-color: #0056b3;
+        }
+        .register-button {
+            background-color: #28a745;
+            color: #fff;
+        }
+        .register-button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <!-- these code use of promt  -->
+    <script>
+        // console.log("hello world");
+       let age= prompt("Enter your  age");
+       if(age>17){
+        console.log("congrast now you can vote ");
+
+       }else{
+        console.log("wait for time to give vote");
+       }
+
+    </script>
+    <div class="button-container">
+        <button class="login-button" onclick="confirmRedirect('login')">Login</button>
+        <button class="register-button" onclick="confirmRedirect('register')">Register</button>
+    </div>
+
+    <script>
+                    
+        function confirmRedirect(page) {
+            let message = page === 'login' ? "Are you sure you want to go to the login page?" : "Are you sure you want to go to the register page?";
+            if (confirm(message)) {
+                window.location.href = page + ".html";
+            }
+        }
+    </script>
+</body>
+</html>
